@@ -19,7 +19,9 @@ Farm to Plate is the place to order your healthy and locally sourced meal kit de
 ## Authors
 
 Kara Lu
-https://karalu.ca
+https://karalu.ca/project/26
+
+Other team members: Shriram, Minnie, Yingying
 
 ## Version History
 
