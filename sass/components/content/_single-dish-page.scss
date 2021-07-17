@@ -1,0 +1,233 @@
+.single-dish {
+
+    .banner,
+    .ingredients,
+    .cooking-directions {
+        margin: 0 4%;
+    }
+
+    h2 {
+        color: $color__primary;
+    }
+
+    .inner-banner {
+        position: relative;
+        img{
+            height: 200px;
+        }
+        h1 {
+            bottom: 0;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.2), rgb(255, 255, 255,1));
+            width:100%;
+            margin: 0;
+            padding: 15px;
+            line-height: 1.3;
+        }
+    }
+
+    .dish-info-icon {
+        text-align: center;
+
+        figure {
+            display: inline-block;
+
+           img {
+            width: 80px;
+            height: 20px;
+            display: block;
+            object-fit: contain;
+            object-position: center;
+           }
+        }
+
+        @media screen and (min-width: $breakpoint-mobile) {
+            & {
+                text-align: right;
+
+            
+            figure{
+                margin-left: 4%;
+                img {
+                    width: 100px;
+                    height: 24px;
+                }
+            }
+
+            }
+        }
+    }
+
+
+    // Section Ingredients
+
+    .ingredients {
+        margin: 4rem 4%;
+
+        h2, .deliver-item p  {
+            color: $color__primary;
+        }
+
+        h3 {
+            color: $color__secondary;
+        }
+
+        .deliver {
+            display: flex;
+            flex-wrap: wrap;
+
+            h3 {
+                flex-basis: 100%;
+            }
+
+        .deliver-item {
+            text-align: center;
+                flex: 1 0 auto;
+
+            img {
+                height: 125px;
+                width: 125px;
+            }
+        }
+    }
+
+    
+    .need {
+        ul {
+            margin: revert;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 30px;
+        }
+    }
+
+
+
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin-top: 4rem;
+
+        thead {
+            font-size: 1.17em;
+
+            tr {
+            width: 100%;
+            border-bottom: 1px solid black;
+            }
+        }
+
+        th {
+            text-align: left;
+            padding: 0 10px 0 10px;
+        }
+
+        td {
+            padding: 0 10px 0 10px;
+        }
+
+        .calories {
+            border-bottom: 3px solid black;
+            td:first-of-type {
+                font-size: 1.17em;
+            }
+        }
+
+        .nutrition-item {
+            td:first-of-type {
+            font-weight: bold;
+        }
+    }
+
+        .sodium {
+            border-bottom: 3px solid black;
+        }
+
+        .nutrients-item {
+            border-bottom: 3px solid black;
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 670px){
+    .banner,
+    .ingredients,
+    .cooking-directions{
+        margin: 0 10%;
+    }
+    .inner-banner {
+        position: relative;
+        img{
+            height: 300px;
+        }
+    }
+    .ingredients {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: .5fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "ingredients-title ingredients-title ingredients-title"
+        "deliver deliver nutrition"
+        "deliver deliver nutrition"
+        "need need .";
+        .nutrition{
+            justify-self: end;
+        }
+    }
+    
+    .ingredients-title { grid-area: ingredients-title; }
+    
+    .deliver { 
+        grid-area: deliver;
+        margin: 0;
+        &, h3 {
+        margin-top: 0;
+        }
+    }
+    
+    .need { grid-area: need; }
+    
+    .nutrition { 
+        grid-area: nutrition;
+        margin-top: 0 !important;
+        max-width: 300px;
+        }
+
+    }
+
+    .cooking-directions {
+        max-width: 1000px;
+        .cooking-steps {
+            margin-bottom: 2rem;
+
+            @media screen and (min-width: 600px) {
+                & {
+                    display: flex;
+                    img{
+                        object-fit: cover; 
+                        max-height: 250px;
+                    }
+                    h3{
+                        margin: 0;
+                    }
+
+                    div {
+                        margin-left: 2rem;
+                    }
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 1000px){
+        .inner-banner {
+            img{
+                height: 500px;
+            }
+        }
+    }
+}
+

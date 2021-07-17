@@ -1,0 +1,86 @@
+.this-week-menu {
+  margin: 6rem 10% 2rem;
+  text-align: center;
+  max-width: 1650px;
+
+  @media screen and (min-width: 1650px) {
+    & {
+      margin: 6rem auto 2rem;
+    }
+  }
+
+  h2 {
+    margin-bottom: $header-margin;
+  }
+
+  @media screen and (min-width: $breakpoint-mobile) {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      h2 {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  .menu-item {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+
+    h3 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+      height: 60px;
+      margin: 0;
+      flex-direction: column;
+      justify-content: center;
+      display: flex;
+      font-size: 1.2rem;
+    }
+
+    img {
+      display: block;
+      z-index: -1;
+      position: relative;
+      transition: 0.3s ease opacity;
+    }
+
+    a {
+      display: block;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    a:hover img,
+    a:focus-within {
+      opacity: 0.8;
+    }
+  }
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .button {
+    display: inline-block;
+
+    a {
+      @include button-green;
+      transition: all 0.3s ease-in-out;
+    }
+
+    a:hover,
+    a:focus {
+      @include button-yellow;
+    }
+  }
+}

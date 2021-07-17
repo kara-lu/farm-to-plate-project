@@ -1,0 +1,210 @@
+.single-product {
+
+	.woocommerce-message {
+		color: #fff;
+	
+		a {
+			padding: 0 .5rem;
+			font-weight: 700;
+			color: #fff;
+		}
+	}
+
+	.menu-item{
+		h3{
+			color:white;
+		}
+		transition: 0.3s ease opacity;
+		&:hover,
+		&:focus-within{
+			opacity: 0.8;
+		}
+	}
+
+	div.product {
+		position: relative;
+
+		.woocommerce-product-gallery {
+			position: relative;
+			width: 80%;
+			margin: 0 auto;
+
+			.woocommerce-product-gallery__wrapper img {
+				width: 99%;
+				margin: 0 auto;
+				object-fit: cover;
+			}
+
+			.woocommerce-product-gallery__trigger {
+				position: absolute;
+				bottom: 2em;
+				right: 2em;
+				display: block;
+				z-index: 99;
+			}
+
+			.flex-viewport {
+				margin-bottom: 1em;
+			}
+
+			.flex-control-thumbs {
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					cursor: pointer;
+					float: left;
+
+					img {
+						opacity: 0.5;
+
+						&.flex-active {
+							opacity: 1;
+						}
+					}
+
+					&:hover {
+
+						img {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			@for $i from 2 through 5 {
+
+				&.woocommerce-product-gallery--columns-#{$i} {
+
+					.flex-control-thumbs {
+
+						li {
+
+							@include column-width($i);
+
+							&:nth-child(#{$i}n) {
+								margin-right: 0;
+							}
+
+							&:nth-child(#{$i}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.summary {
+			width: 80%;
+			margin: 0 auto;
+
+			h1 {
+				font-size: 2rem;
+				margin-left: 0;
+			}
+		}
+
+		.input-text.qty.text {
+			width: 80px;
+		}
+
+		
+		select {
+			padding: .25rem 0;
+			margin: .25rem 0;
+		}
+
+		#servings-per-meal, #meals-a-week {
+			padding: .25rem 0.5rem;
+		}
+
+		.reset_variations {
+			padding: 0 .5rem;
+		}
+		
+		.woocommerce-variation-add-to-cart {
+			display: flex;
+			align-items: center;
+		}
+
+		.single_add_to_cart_button {
+			@include button-green;
+			padding: 20px 30px;
+			border: none;
+			margin: 1rem 1.5rem;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				@include button-yellow;
+				padding: 20px 30px;
+			}
+		}
+
+		// description
+		.woocommerce-tabs, .wc-tabs-wrapper {
+			margin: 0 auto 5rem;
+
+			h2 {
+				font-size: 1.1rem;
+			}
+		}
+
+		@media all and (min-width: $breakpoint-tablet){
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			.woocommerce-product-gallery {
+				width: 60%;
+			}
+
+			.summary {
+				align-self: center;
+				width: 99%;
+			}
+
+			.woocommerce-tabs, .wc-tabs-wrapper {
+				grid-column: 2/3;
+				margin: 0 12rem 0 0;
+			}
+
+			.woocommerce-Tabs-panel {
+				margin: 0 10% 0 0;
+
+			}
+
+			.this-week-menu {
+				grid-column: span 2;
+			}
+	
+			
+		}
+	}
+
+	// remove
+	.wc-tabs,
+	.woocommerce-breadcrumb{
+		display: none;
+	}
+
+}
+
+
+
+.stock {
+
+	&:empty::before {
+		display: none;
+	}
+
+	&.in-stock {
+		color: $woocommerce__color-success;
+	}
+
+	&.out-of-stock {
+		color: $woocommerce__color-error;
+	}
+}
+
+

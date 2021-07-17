@@ -1,0 +1,52 @@
+/*
+Theme Name: Farm to Plate
+
+WooCommerce styles override
+*/
+
+// WooCommerce color variables
+$woocommerce__color-error: #FFBF33;
+$woocommerce__color-success: #066436;
+$woocommerce__color-info: #CADED4;
+
+// Import variables and mixins
+@import "abstracts/abstracts";
+
+/**
+ * Shop tables
+ */
+@import "plugins/woocommerce/tables";
+
+/**
+ * Products
+ */
+@import "plugins/woocommerce/products";
+
+/**
+ * Single product
+ */
+@import "plugins/woocommerce/single-product";
+
+/**
+ * Checkout
+ */
+@import "plugins/woocommerce/checkout";
+
+/**
+ * General WooCommerce components
+ */
+@import "plugins/woocommerce/components";
+
+/**
+ * WooCommerce widgets
+ */
+@import "plugins/woocommerce/widgets";
+
+// Cart
+@import "plugins/woocommerce/cart";
+
+// account
+@import "plugins/woocommerce/account";
+
+// login
+@import "plugins/woocommerce/login";

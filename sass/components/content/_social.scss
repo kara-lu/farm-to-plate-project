@@ -1,0 +1,45 @@
+.social {
+  background-color: $color__primary;
+  color: #fff;
+  padding: 1rem 0 3.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+
+  h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-item {
+    width: 35%;
+    margin: 1rem;
+  }
+
+  .social-item a img:hover,
+  .social-item a img:focus {
+    transform: scale(1.01);       
+  }
+  .social-item:focus-within{
+    transform: scale(1.01);  
+  }
+
+  @media all and (min-width: $breakpoint-tablet) {
+    padding: 1.5rem 3rem 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+    h2 {
+      grid-column: span 4;
+    }
+
+    .social-item {
+      width: 30%;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+}

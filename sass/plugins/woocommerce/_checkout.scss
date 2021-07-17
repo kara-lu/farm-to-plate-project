@@ -1,0 +1,174 @@
+.page-id-16{
+
+	form {
+		margin: 0 auto;
+		max-width: 60rem;
+	}
+
+	.woocommerce-error {
+		margin: 0 auto;
+	}
+
+	.woocommerce-form-coupon {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 500px;
+		margin: 2rem auto;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+
+		p:first-of-type {
+			flex-basis: 100%;
+		}
+
+		p:nth-child(2) {
+			margin-right: 10px;
+		}
+
+	}
+
+	.col2-set {
+
+	.form-row-first, .form-row-last {
+		display: flex;
+	}
+	label {
+		width: 13rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
+
+
+	
+
+
+
+	.woocommerce-billing-fields {
+		margin-top: 2rem;
+		max-width: 60rem;
+
+		p {
+			margin-bottom: 1em;
+		}
+
+		label {
+			width: 13rem;
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		input {
+			width: 100%
+		}
+	}
+
+	.woocommerce-form__label {
+		
+		input {
+			margin-right: 10px;
+		}
+
+		span {
+			font-size: 1rem;
+		}
+	}
+
+
+	input#billing_city, 
+	#billing_country_field span, 
+	#billing_state_field span,
+	input#billing_postcode {
+			max-width: 20rem;
+	}
+
+	#order_comments_field {
+		max-width: 60rem;
+	}
+	}
+
+	.woocommerce-checkout-review-order {
+		background-color:$color__background-lightgreen;
+		padding: 2rem 1rem;
+		margin-bottom: 6rem;
+		max-width: 60rem;
+
+		.woocommerce-checkout-review-order-table {
+			text-align: left;
+
+			.cart_item {
+
+				.product-quantity {
+					display: block;
+					text-align: center;
+				}
+
+				dd p {
+					text-align:center;
+				}
+				.product-total {
+					display: inline-flex;
+					align-items: center;
+				}
+			}
+
+			tfoot {
+				.recurring-totals th {
+					padding: 1rem 0;
+				}
+				p {
+					padding: 1rem 0;
+					margin: unset;
+				}
+				}
+			}
+		.methods {
+			margin-left: 0;
+			padding: unset;
+			list-style-type: none;
+		}
+
+		fieldset {
+			max-width: 60rem;
+			border: none;
+			padding: 0;
+
+			div {
+				max-width: 20rem;
+			}
+		}
+
+	}
+
+	.button {
+		@include button-solid;
+	}
+
+
+	.woocommerce-order-details {
+		max-width: 60rem;
+
+		.product-name,
+		.product-total {
+			text-align: left;
+		}
+
+
+		ul.wc-item-meta {
+			padding: unset;
+			margin: unset;
+		}
+
+
+		table.shop_table {
+			max-width: 40rem;
+		}
+
+
+		.subscription-actions {
+			margin-top: 3rem;
+		}
+	}
+
+}

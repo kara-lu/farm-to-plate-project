@@ -1,0 +1,81 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+// Centering elements (wrapper)
+@mixin margin-center {
+	margin: {
+	  left: auto;
+	  right: auto;
+	}
+  }
+  
+  // positioning elements in a flex container
+  @mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+  }
+  
+  @mixin flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+  }
+  
+  @mixin flex-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+  
+
+//   button with background
+	@mixin button-green {
+		background-image: url("img/green-button.png");
+		background-size: cover;
+		background-position: center center;
+		background-color: transparent;
+		padding: 20px 40px;
+		font-size: 1.25rem;
+		color: white;
+		display: block;
+	}
+	@mixin button-yellow {
+		background-image: url("img/yellow-button.png");
+		background-size: cover;
+		background-position: center center;
+		background-color: transparent;
+		padding: 20px 40px;
+		font-size: 1.25rem;
+		color: white;
+		display: block;
+	}
+
+// button with solid green
+
+@mixin button-solid {
+	padding: .75rem 1rem;
+	border-radius: 25px;
+	transition: all .5s ease-in-out;
+	border: none;
+	cursor: pointer;
+	background-color: $color__primary;
+	color: white;
+
+	&:hover {
+		background-color: $color__secondary;
+	}
+}

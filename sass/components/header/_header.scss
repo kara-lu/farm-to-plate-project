@@ -1,0 +1,25 @@
+.site-header{
+    height: 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    .site-branding{
+        width: 60px;
+        margin-top: 20px;
+        margin-left: 10%;
+    }
+    .main-navigation{
+        margin-right: 10%;
+    }
+    @media screen and (min-width: $breakpoint-tablet) {
+        height: 160px;
+        .site-branding{
+            width: 100px;
+            margin-top: 30px;
+        }
+        .main-navigation{
+            margin-top: 30px;
+        }
+    }
+        
+}

@@ -1,0 +1,51 @@
+.how-it-works {
+    max-width: 1400px;
+    margin: 6rem 10%;
+    
+    & > h2 {
+        text-align: center; 
+        margin-bottom: $header-margin;
+    }
+
+    h2, p {
+        font-family: $font__main;
+        color: $color__primary;
+    }
+
+    .how-it-work-item {
+        margin: 0 auto;
+        max-width: 400px;
+
+        img {
+        display: block;
+        margin: 0 auto;
+        }
+
+        h2 {
+        font-size: 1.5rem;
+        }
+    }
+}
+
+    @media screen and (min-width: 679px) {
+        .how-it-works {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            & > h2 {
+                flex-basis: 100%;
+            }
+
+            .how-it-work-item {
+                width: 300px;
+            }
+
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        .how-it-works {
+            margin: 6rem auto;
+        }
+    }

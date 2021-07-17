@@ -1,0 +1,135 @@
+.pricing {
+    // styling for free trial notes
+    .free-trial-note {
+        p {
+            margin: 0;
+        }
+
+        background-color: #CADED4;
+        color: $color__primary;
+        text-align: center;
+        padding: .5rem 0;
+    }
+
+    // styling for product items
+    .product {
+        padding: 1rem;
+    }
+
+    .product-item {
+        width: 300px;
+        margin: 2rem auto 3rem;
+        padding-bottom: .75rem;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 15px;
+
+        h3, p, .button {
+            padding: 0 1.5rem;
+            margin: .5rem 0;
+        }
+
+        img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .button {
+            @include button-green;
+            margin: 1rem;
+            padding: 3px 0 6px;
+            width: 120px;
+
+            p {
+                text-align: center;
+                font-weight: 700;
+                font-size: 1.1rem;
+            }
+
+            &:hover {
+                background-image: url("img/yellow-button.png");
+            }
+        }
+    }
+
+    @media all and (min-width: $breakpoint-tablet) {
+        .product {
+            width: 80%;
+            margin: 1rem auto;
+            @include flex-center;
+        }
+
+        .product-item {
+            margin: 2rem 3rem 3rem;
+            transition: all .5s ease-in-out;
+
+            &:hover, &:focus {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+
+// styling for faq snippet
+    .pricing-faq {
+        width: 80%;
+        margin: 4rem auto 2rem;
+        color: $color__primary;
+
+        h2 {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        h3 {
+            margin: 2.5rem 0 .5rem;
+        }
+
+        h4 {
+            margin-bottom: .5rem;
+        }
+
+        hr {
+            background-color: #CADED4;
+        }
+    }
+
+    @media all and (min-width: $breakpoint-mobile) {
+        .pricing-faq {
+            width: 70%;     
+        }
+    }
+
+    @media all and (min-width: $breakpoint-tablet) {
+        .pricing-faq {
+            width: 50%;     
+        }
+    }
+
+    // styling for faq cta button section
+    .button-container{
+        padding: .5rem;
+
+        a {
+            font-weight: 700;
+            margin: 2rem 0;
+            padding: 40px 25px;
+
+            &:hover, &:focus {
+                padding: 40px 25px;
+            }
+        }
+
+    } 
+
+    // styling for delivery area section
+    .delivery {
+        padding-top: .25rem;
+        margin-top: 5rem;
+
+        h2 {
+            padding: 0 1rem;
+        }
+
+    }
+
+}

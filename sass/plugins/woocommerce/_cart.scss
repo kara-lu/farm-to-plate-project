@@ -1,0 +1,170 @@
+// Cart Page
+.post-15 {
+    padding: 0 1rem;
+
+    // remove button
+    .product-remove a {
+        background-color: $color__primary;
+        color: #fff;
+        padding: .15rem .5rem;
+        border-radius: 50%;
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    .woocommerce-cart-form td {
+        padding: .5rem;
+    }
+
+    .product-thumbnail {
+        text-align: center;
+        background: #EDF5F1;
+    }
+
+    .product-name a {
+        font-weight: 700;
+    }
+
+    // styles for variation elements (servings per meal & meals a week)
+    .variation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        :nth-child(odd) {
+            width: 65%;
+
+        }
+        
+        :nth-child(even) {
+            width: 6%;
+            text-align: right;
+        }
+
+        dd {
+            margin: 0;
+        }
+
+    }
+
+    // quantity input field
+    .input-text.qty.text {
+        width: 80px;
+    }
+
+    // coupon input field
+    .coupon {
+        label {
+            display: none;
+        }
+
+        input {
+            margin-right: .5rem;
+        }
+
+    }
+
+    // apply coupon & update cart buttons
+    button {
+        margin: .5rem 0;
+        @include button-solid;
+    }
+
+    // Cart totals section
+    .cart-collaterals {
+        padding-bottom: 2rem;
+
+        .cart_totals {
+
+            td {
+                background: #EDF5F1;
+                padding: 1rem;
+            }
+        }
+
+    }
+
+    //remove cart subtotal
+    .cart_totals tbody tr:first-child,
+    .cart_totals tbody tr:nth-child(2) {
+        display: none;
+    }
+
+    .recurring-totals {
+        display: none;
+    }
+
+
+    // checkout button 
+    .wc-proceed-to-checkout {
+        display: block;
+        text-align: right;
+
+        a {
+            text-align: center;
+
+            @include button-solid;
+        }
+        
+    }
+
+    @media all and (min-width: $breakpoint-tablet){
+
+        thead {
+            background-color: #EDF5F1;
+            color: $color__primary;
+            
+            tr th {
+                padding: .5rem 0;
+            }
+        }
+
+        .product-thumbnail {
+            background: transparent;
+    
+        }
+
+        .variation {
+            justify-content: flex-start;
+            margin: 0;
+        }
+
+        .subscription-details {
+            display: block;
+            width: 80%;
+        }
+
+        .product-quantity input {
+            margin-right: 1.5rem;
+        }
+
+        // coupon sections
+        .actions {
+            text-align: right;
+        }
+
+        // cart totals section
+        .cart_totals {
+            margin: 4rem 0 0 auto;
+            width: 40%;
+
+            th {
+                padding: 1rem;
+                background: #CADED4;
+                color: $color__primary;
+                width: 150px;
+            }
+
+            td {
+                background: #EDF5F1;
+                padding: 1rem;
+            }
+        }
+
+        // checkout button
+        .wc-proceed-to-checkout {
+            margin-top: 2rem;
+            
+        }
+    }
+}

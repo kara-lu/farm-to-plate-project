@@ -1,0 +1,103 @@
+#post-17{
+    .woocommerce{
+
+    .woocommerce-MyAccount-navigation{
+        background-color: $woocommerce__color-info;
+        margin: 20px 0;
+        padding: 20px;
+        max-height: 600px;
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                li{
+                    margin: 30px;
+                }
+            }
+        }
+        .woocommerce-MyAccount-content{
+            max-width: 600px;
+            .order-number,
+            .order-date,
+            .order-status{
+                padding: 5px 10px;
+                margin: 0 5px;
+            }
+            .order_item{
+                background-color: $woocommerce__color-info;
+
+                .product-name{
+                    a{
+                        margin: 20px;
+                        font-size: 1.25rem;
+                    }
+                }
+                .wc-item-meta{
+                    margin: 0 0 20px 0;
+                    padding: 0;
+                    list-style-type: none;
+                    li{
+                        margin-left: 20px;
+                        p{
+                            display: inline-block;
+                            margin: 10px 0 0 0;
+                        }
+                    }
+                }
+            }
+
+            a.woocommerce-Button {
+                padding: 0 0.5rem;
+                font-weight: 700;
+            }
+
+            #payment{
+                margin: 20px;
+                .woocommerce-PaymentMethods{
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                }
+            }
+            .woocommerce-EditAccountForm{
+                fieldset{
+                    margin-bottom: 20px;
+                }
+
+                button.woocommerce-Button {
+                    @include button-solid;
+                }
+            }
+
+        }
+    }
+
+    @media all and (min-width: $breakpoint-tablet) {
+        .woocommerce{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            h2{
+                grid-column-start: 1;
+                grid-row-start: 2;
+            }
+            .woocommerce-form{
+                grid-column-start: 1;
+                grid-row-start: 3;
+            }
+            .woocommerce-MyAccount-navigation{
+                margin: 0 20px 0 0;
+            }
+            .woocommerce-MyAccount-content{
+                margin-left: 20px;
+            }
+        }
+    }
+    @media all and (min-width: $breakpoint-desktop) {
+        .woocommerce{
+            .woocommerce-MyAccount-content{
+                margin-left: 30px;
+            }
+        }
+    }
+}
+

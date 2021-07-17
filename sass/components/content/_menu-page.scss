@@ -1,0 +1,127 @@
+.menu-page {
+  h2 {
+    text-align: center;
+    color: $color__primary;
+    margin-top: 60px;
+  }
+
+  // fiter -----------------------------------------
+  .menu-filter {
+    margin: 30px 10px 20px 10px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 15px 20px;
+      width: 260px;
+      // height: 100px;
+      background-color: $color__primary;
+      color: white;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    a:hover,
+    a:focus {
+      // background-color: $color__secondary;
+      opacity: 0.85;
+    }
+
+    .selected {
+      background-color: $color__secondary;
+    }
+  }
+  // menu container ----------------------------------------
+
+  .menu-container {
+    min-height: 50vh;
+    @media all and (min-width: $breakpoint-tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  .vegetarian-menu,
+  .signature-menu {
+    @media all and (min-width: 1450px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 20px;
+    }
+    h2 {
+      grid-column-start: 1;
+      grid-column-end: span 2;
+      grid-row-start: 1;
+    }
+  }
+
+  // menu item ----------------------------------------------------
+  .menu-item {
+    max-width: 280px;
+    margin: 20px auto;
+    .dish-image {
+      display: block;
+      height: 280px;
+      object-fit: cover;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover,
+    &:focus,
+    &:focus-within {
+      opacity: 0.8;
+    }
+
+    h3 {
+      margin: 10px 0 0 0;
+    }
+
+    @media all and (min-width: 1450px) {
+      margin: 20px 10px;
+    }
+  }
+  // long button -------------------------------------
+  .long-button {
+    margin: 60px auto;
+    background-image: url(img/green-button.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 250px 50px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-image: url(img/yellow-button.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 250px 50px;
+      text-align: center;
+    }
+    a {
+      display: block;
+      color: white;
+      padding: 20px;
+    }
+
+    @media all and (min-width: $breakpoint-tablet) {
+      background-size: 400px 100px;
+
+      &:hover,
+      &:focus {
+        background-image: url(img/yellow-button.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 400px 100px;
+        text-align: center;
+      }
+      a {
+        padding: 50px;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

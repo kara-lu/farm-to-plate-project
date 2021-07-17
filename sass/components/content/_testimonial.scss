@@ -1,0 +1,34 @@
+.testimonial {
+    color: $color__primary;
+    padding: 1rem;
+    margin: 8rem auto;
+
+    h2 {
+        text-align: center;
+    }
+
+    .testimonial-item {
+        padding: 1rem 0;
+
+        blockquote p {
+            margin-bottom: .5rem;
+        }
+    }
+
+    cite {
+        font-weight: 700;
+    }
+
+    @media all and (min-width: $breakpoint-tablet) {
+        @include flex-center;
+        align-items: flex-start;
+
+        h2 {
+            width: 100%;
+        }
+
+        .testimonial-item {
+            width: 35%;
+        }
+    }
+}

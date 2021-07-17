@@ -1,0 +1,91 @@
+.not-found {
+    color: $color__primary;
+
+    .page-header {
+        margin: 0 1rem;
+        text-align: center;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+    }
+
+    .content-container {
+        margin: 2rem 1rem 0;
+        text-align: center;
+        line-height: 1.5;
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            margin: 1rem 0 0;
+            padding: 0;
+            list-style: none;
+            @include flex-column;
+
+            li {
+                margin: 1rem 0;
+            }
+
+            a {
+                background-color: $color__primary;
+                color: #fff;
+                padding: .5rem;
+                border-radius: 20px;
+                display: block;
+                width: 160px;
+            }
+        }
+    }
+
+    .image-404-container img {
+        margin: 0 auto;
+        width: 99%;
+    }
+
+
+    @media all and (min-width: $breakpoint-desktop) {
+        .page-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+            max-width: 100rem;
+            width: 90%;
+            margin: 0 auto;
+
+            .content-container {
+                margin: 0 0 0 10%;
+                text-align: left;
+                width: 50%;
+
+                .page-title {
+                    margin-top: 0;
+                }
+
+                ul {
+                    align-items: flex-start;
+
+                    li {
+                        margin: .75rem 0;
+                    }
+
+                    a {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .image-404-container {
+                margin: 0 10%;
+            }
+
+            
+        }
+
+    }
+}
+

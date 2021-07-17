@@ -1,0 +1,35 @@
+//Archive Menu
+
+.archive-menu {
+
+    color: $color__primary;
+
+    h1 {
+      text-align: center;
+      margin: 1rem 10%;
+    }
+  
+    h2 {
+      margin: 0 0 .5rem;
+      font-size: 1.3rem;
+    }
+  
+    .menu-container {
+      margin: 0 1rem;
+  
+      section {
+        border-style: solid;
+        border-color: rgba(6, 100, 54, 0.4);
+        border-radius: 10px;
+        margin-bottom: 3rem;
+        padding: 4%;
+      }
+    }
+
+    @media all and (min-width: $breakpoint-tablet) {
+        .menu-container {
+            margin: 0 auto;
+            max-width: 620px;
+        }
+    }
+  }

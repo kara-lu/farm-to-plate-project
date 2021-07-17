@@ -1,0 +1,38 @@
+.delivery{
+    .map-container{
+            width:100%;
+            display: block;
+            img{
+                display: block;
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                object-position: 50% 0%;
+            }
+    }
+    margin: 50px 0 0 0;
+    @media screen and (min-width: $breakpoint-tablet) {
+            .map-container{
+                img{
+                    height: 400px;
+                }
+            }
+    }
+    @media screen and (min-width: $breakpoint-desktop) {
+        .map-container{
+            img{
+                height: 500px;
+                object-position: 50% 5%;
+            }
+       }
+    }
+    @media screen and (min-width: 1450px) {
+        .map-container{
+            img{
+                height: 700px;
+                object-position: 50% 5%;
+            }
+       }
+    }
+
+}
