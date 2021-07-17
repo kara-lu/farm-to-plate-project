@@ -25,5 +25,13 @@ Other team members: Shriram, Minnie, Yingying
 
 ## Version History
 
-* 0.1
+* 1.0
     * Initial Release
+
+## Acknowledgments
+
+Images and illustrations
+* [unsplash](https://unsplash.com/)
+* [pixabay](https://pixabay.com/)
+* [Burst](https://burst.shopify.com/)
+* [illlustrations](https://illlustrations.co/)
