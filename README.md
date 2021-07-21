@@ -1,6 +1,7 @@
 # Farm to Plate
 
 A WordPress and WooCommerce site for local meal delivery service.
+* [Link to Site](https://farmtoplate.bcitwebdeveloper.ca/)
 
 ## Description
 
@@ -12,16 +13,13 @@ Farm to Plate is the place to order your healthy and locally sourced meal kit de
 
 * Install Node Modules before running
 
-### Installing
-
-* place this theme into wordpress theme folder
-
 ## Authors
 
 Kara Lu
-https://karalu.ca/project/26
-
 Other team members: Shriram, Minnie, Yingying
+
+## Project Page
+https://karalu.ca/project/26
 
 ## Version History
 
